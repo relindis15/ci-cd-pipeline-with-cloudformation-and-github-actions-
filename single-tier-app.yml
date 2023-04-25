@@ -2,7 +2,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: my-static1-web9-bucket
+      BucketName: my-static1-win-bucket
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html

@@ -1,19 +1,33 @@
 Resources:
-  S3Bucket:
+  MyBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: my-static1-win-bucket
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
-  BucketPolicy:
+        ErrorDocument: error.html
+  MyBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
-      Bucket: !Ref S3Bucket
+      Bucket: !Ref MyBucket
       PolicyDocument:
         Statement:
           - Sid: PublicReadGetObject
             Effect: Allow
             Principal: "*"
-            Action: s3:GetObject
-            Resource: !Join ["", ["arn:aws:s3:::", !Ref S3Bucket, "/*"]]
+            Action: "s3:GetObject"
+            Resource: !Join ["", ["arn:aws:s3:::", !Ref MyBucket, "/*"]]
+Outputs:
+  WebsiteURL:
+    Value:
+      !Join [
+        "",
+        [
+          "http://",
+          !Ref MyBucket,
+          ".s3-website-",
+          !Ref "AWS::Region",
+          ".amazonaws.com",
+        ],
+      ]
+    Description: URL for the static website

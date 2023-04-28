@@ -24,7 +24,7 @@ jobs:
             --stack-name my-stack \
             --capabilities CAPABILITY_NAMED_IAM \
             --parameter-overrides \
-              S3BucketName=nkeng-static-website-bucket \
+              S3BucketName=nken-static-website-bucket \
             --region us-east-1
 
       - name: Sync with S3 Bucket
@@ -32,4 +32,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 sync . s3://nkeng-static-website-bucket / --exclude "*" --include "index.html" --region us-east-1
+          aws s3 sync . s3://nken-static-website-bucket / --exclude "*" --include "index.html" --region us-east-1

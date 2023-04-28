@@ -4,10 +4,10 @@ Resources:
     Properties:
       BucketName: nken-static-website-bucket
       PublicAccessBlockConfiguration:
-          BlockPublicAcls: false
+        BlockPublicAcls: false
       OwnershipControls:
-          Rules:
-            - ObjectOwnership: BucketOwnerEnforced 
+        Rules:
+          - ObjectOwnership: BucketOwnerEnforced
       WebsiteConfiguration:
         IndexDocument: index.html
   BucketPolicy:
@@ -18,6 +18,6 @@ Resources:
         Statement:
           - Sid: PublicReadGetObject
             Effect: Allow
-            Principal: '*'
-            Action: 's3:GetObject'
-            Resource: !Join ['', ['arn:aws:s3:::', !Ref S3Bucket, '/*']
+            Principal: "*"
+            Action: "s3:GetObject"
+            Resource: !Join ["", ["arn:aws:s3:::", !Ref S3Bucket,  '/*']]

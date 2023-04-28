@@ -2,7 +2,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: nken-static-website-bucket
+      BucketName: nkeng-static-website-bucket
       PublicAccessBlockConfiguration:
         BlockPublicAcls: false
       OwnershipControls:

@@ -21,7 +21,7 @@ jobs:
         run: |
           aws cloudformation deploy \
             --template-file ./single-tier-app.yaml \
-            --stack-name lisara-stack \
+            --stack-name lisa-stack \
             --capabilities CAPABILITY_NAMED_IAM \
             --parameter-overrides \
               S3BucketName=lisara-bucket \
@@ -32,4 +32,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 sync . s3://lisara-bucket / --exclude "*" --include "index.html" --region us-east-1
+          aws s3 sync . s3://lisara-bucket/ --exclude "*" --include "index.html" --region us-east-1

@@ -2,7 +2,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: razi-bucket
+      BucketName: lisara-bucket
       PublicAccessBlockConfiguration:
         BlockPublicAcls: false
       OwnershipControls:

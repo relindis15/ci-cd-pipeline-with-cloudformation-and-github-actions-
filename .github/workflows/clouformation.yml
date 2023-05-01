@@ -21,7 +21,7 @@ jobs:
         run: |
           aws cloudformation deploy \
             --template-file ./single-tier-app.yaml \
-            --stack-name jay-stack \
+            --stack-name jayd-stack \
             --capabilities CAPABILITY_NAMED_IAM \
             --parameter-overrides \
               S3BucketName=jay-static-website-bucket \

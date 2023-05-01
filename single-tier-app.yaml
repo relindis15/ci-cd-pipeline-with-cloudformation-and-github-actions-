@@ -2,7 +2,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: rel-static-webcsite-buket
+      BucketName: jay-website-bucket
       PublicAccessBlockConfiguration:
         BlockPublicAcls: false
       OwnershipControls:
@@ -20,4 +20,4 @@ Resources:
             Effect: Allow
             Principal: "*"
             Action: "s3:GetObject"
-            Resource: !Join ["", ["arn:aws:s3:::", !Ref S3Bucket,  '/*']]
+            Resource: !Join ["", ["arn:aws:s3:::", !Ref S3Bucket, "/*"]]

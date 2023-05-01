@@ -26,6 +26,8 @@ Create a folder .github and in it create a workflow folder and a yaml file insid
 
 Push to our github repository
 
+<img width="782" alt="stack deployed" src="https://user-images.githubusercontent.com/114790551/235387928-997b0536-4802-4a0e-8fe5-47b3ed20d28f.png">
+
 Test your pipeline
 
 Answer the open questions

@@ -2,7 +2,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: jay-website-bucket
+      BucketName: razi-bucket
       PublicAccessBlockConfiguration:
         BlockPublicAcls: false
       OwnershipControls:

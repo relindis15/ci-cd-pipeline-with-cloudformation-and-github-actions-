@@ -2,7 +2,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: lisara-bucket
+      BucketName: lisankeng-bucket
       PublicAccessBlockConfiguration:
         BlockPublicAcls: false
       OwnershipControls:
